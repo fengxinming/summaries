@@ -1,0 +1,17 @@
+{
+  "formatOnSave.on": true,
+  "formatOnSave.extentions": [
+    "js",
+    "styl",
+    "vue"
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  }
+}

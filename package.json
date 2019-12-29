@@ -1,0 +1,26 @@
+{
+  "name": "summaries",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Study and summary",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "gh-pages": "git subtree push --prefix=gh-pages origin gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxinming/summaries.git"
+  },
+  "author": "Jesse Feng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengxinming/summaries/issues"
+  },
+  "homepage": "https://github.com/fengxinming/summaries#readme",
+  "dependencies": {
+    "vuepress": "^1.2.0",
+    "vuepress-theme-thindark": "^1.0.1"
+  }
+}
