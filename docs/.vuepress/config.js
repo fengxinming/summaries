@@ -27,5 +27,6 @@ module.exports = {
     }
   },
   extraWatchFiles: ['.vuepress/nav/*.js', '.vuepress/sidebar/*.js'],
-  dest: 'gh-pages'
+  dest: 'gh-pages',
+  base: '/summaries/'
 };
