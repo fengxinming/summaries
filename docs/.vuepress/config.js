@@ -20,13 +20,12 @@ module.exports = {
         editLinkText: '在 GitHub 上编辑此页',
         lastUpdated: '上次更新',
         nav: require('./nav/zh-CN'),
-        sidebar: {
-          '/basic/': require('./sidebar/basic')
-        }
+        sidebar: require('./sidebar/zh-CN')
       }
     }
   },
   extraWatchFiles: ['.vuepress/nav/*.js', '.vuepress/sidebar/*.js'],
   dest: 'gh-pages',
-  base: '/summaries/'
+  base: '/summaries/',
+  port: 8000
 };
