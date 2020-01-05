@@ -104,7 +104,7 @@ div {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-``
+```
 
 ### flex 布局
 
@@ -127,13 +127,27 @@ div {
 
 ```css
 .parent {
-    text-align: center; /* 水平居中 */
+  text-align: center; /* 水平居中 */
 
-    .child {
-      display: inline-block;  /* 核心：宽度自适应，高度可居中 */
-      line-height: 20px;      /* 会自动继承，必须设置不同的值来覆盖 */
-      vertical-align: middle; /* 垂直居中 */
-    }
+  .child {
+    display: inline-block;  /* 核心：宽度自适应，高度可居中 */
+    line-height: 20px;      /* 会自动继承，必须设置不同的值来覆盖 */
+    vertical-align: middle; /* 垂直居中 */
+  }
+}
+
+```
+
+### 使用 display：table
+
+```css
+.parent {
+  text-align: table;
+
+  .child {
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
 ```
