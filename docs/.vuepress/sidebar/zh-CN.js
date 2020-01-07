@@ -1,13 +1,19 @@
 module.exports = {
-  '/web-basic/css/': [
+  '/web-basic/': [
     '',
-    'position',
-    'align-items',
-    'selector',
-    'specifishity'
+    'css-align-items',
+    'css-position',
+    'css-selector',
+    'css-specifishity',
+    'es6',
+    'html5',
+    'js-array',
+    'js-basic',
+    'js-event-loop',
+    'js-promise',
+    'web-cross-domain',
+    'web-csrf',
+    'web-xss'
   ],
-  '/web-basic/html/': ['', 'html5', 'xss', 'csrf'],
-  '/web-basic/js/': ['', 'array', 'es6', 'promise', 'event-loop'],
-  '/web-basic/issues/': ['', 'cross-domain'],
   '/web-tool/webpack/': ['', 'performance-optimization']
 };
