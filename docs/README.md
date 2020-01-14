@@ -2,7 +2,7 @@
 home: true
 heroImage: /hero.png
 actionText: 开始 →
-actionLink: /web-basic/html/
+actionLink: /web-basic/
 footer: MIT Licensed | Copyright © 2019-present Jesse Feng
 ---
 

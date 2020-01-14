@@ -21,6 +21,6 @@
   "homepage": "https://github.com/fengxinming/summaries#readme",
   "dependencies": {
     "vuepress": "^1.2.0",
-    "vuepress-theme-thindark": "^1.0.1"
+    "vuepress-theme-purple": "^1.0.0"
   }
 }

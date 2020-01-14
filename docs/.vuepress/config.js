@@ -6,8 +6,9 @@ module.exports = {
       description: '前端技术学习与总结'
     }
   },
-  theme: 'thindark',
+  theme: 'purple',
   themeConfig: {
+	logo: 'https://react-redux.js.org/img/redux_white.svg',
     repo: 'fengxinming/summaries',
     editLinks: true,
     docsDir: 'docs',

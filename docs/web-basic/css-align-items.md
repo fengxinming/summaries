@@ -142,7 +142,7 @@ div {
 
 ```css
 .parent {
-  text-align: table;
+  display: table;
 
   .child {
     display: table-cell;
