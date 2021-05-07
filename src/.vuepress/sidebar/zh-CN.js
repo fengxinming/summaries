@@ -5,15 +5,14 @@ module.exports = {
     'css-position',
     'css-selector',
     'css-specifishity',
-    'es6',
-    'html5',
-    'js-array',
-    'js-basic',
-    'js-event-loop',
     'js-promise',
+    'js-event-loop',
     'web-cross-domain',
     'web-csrf',
-    'web-xss'
+    'web-xss',
+    'es6',
+    'html5',
+    'js-array'
   ],
   '/web-tool/webpack/': ['', 'performance-optimization']
 };

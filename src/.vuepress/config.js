@@ -11,7 +11,7 @@ module.exports = {
 	logo: 'https://react-redux.js.org/img/redux_white.svg',
     repo: 'fengxinming/summaries',
     editLinks: true,
-    docsDir: 'docs',
+    docsDir: 'src',
     smoothScroll: true,
     locales: {
       '/': {
@@ -26,7 +26,7 @@ module.exports = {
     }
   },
   extraWatchFiles: ['.vuepress/nav/*.js', '.vuepress/sidebar/*.js'],
-  dest: 'gh-pages',
+  dest: 'docs',
   base: '/summaries/',
   port: 8000
 };

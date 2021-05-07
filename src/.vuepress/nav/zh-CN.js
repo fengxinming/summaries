@@ -9,8 +9,8 @@ module.exports = [
       {
         text: 'JS框架',
         items: [
-          { text: 'Vue', link: '/web-framework/vue/' },
-          { text: 'React', link: '/web-framework/react/' }
+          { text: 'React', link: '/web-framework/react/' },
+          { text: 'Vue', link: '/web-framework/vue/' }
         ]
       }
     ]

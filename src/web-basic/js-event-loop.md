@@ -9,7 +9,7 @@
 
 **简易事件循环图解**
 
-![event loop](https://upload-images.jianshu.io/upload_images/3635292-20ff21d33c514952.png)
+![event loop](/event-loop.png)
 
 ## 浏览器环境
 

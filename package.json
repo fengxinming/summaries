@@ -5,9 +5,9 @@
   "description": "Study and summary",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "gh-pages": "git subtree push --prefix=gh-pages origin gh-pages"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
+    "gh-pages": "git subtree push --prefix=src origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/fengxinming/summaries#readme",
   "dependencies": {
-    "vuepress": "^1.2.0",
-    "vuepress-theme-purple": "^1.0.0"
+    "vuepress": "^1.8.2",
+    "vuepress-theme-purple": "^1.1.1"
   }
 }
