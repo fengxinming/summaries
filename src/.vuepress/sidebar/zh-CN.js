@@ -3,8 +3,6 @@ module.exports = {
     '',
     'css-align-items',
     'css-position',
-    'css-selector',
-    'css-specifishity',
     'js-promise',
     'js-event-loop',
     'web-cross-domain',
@@ -12,7 +10,9 @@ module.exports = {
     'web-xss',
     'es6',
     'html5',
-    'js-array'
+    'js-array',
+    'css-selector',
+    'css-specifishity'
   ],
   '/web-tool/webpack/': ['', 'performance-optimization']
 };
