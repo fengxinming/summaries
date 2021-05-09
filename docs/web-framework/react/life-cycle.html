@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React的生命周期 | 学海无涯</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="前端技术学习与总结">
+    
+    <link rel="preload" href="/summaries/assets/css/0.styles.77a6be34.css" as="style"><link rel="preload" href="/summaries/assets/js/app.8c529481.js" as="script"><link rel="preload" href="/summaries/assets/js/2.8499a4ee.js" as="script"><link rel="preload" href="/summaries/assets/js/25.6abf712a.js" as="script"><link rel="prefetch" href="/summaries/assets/js/10.77dfeb9d.js"><link rel="prefetch" href="/summaries/assets/js/11.1eec145a.js"><link rel="prefetch" href="/summaries/assets/js/12.33290a9c.js"><link rel="prefetch" href="/summaries/assets/js/13.8640e0a1.js"><link rel="prefetch" href="/summaries/assets/js/14.9f63395e.js"><link rel="prefetch" href="/summaries/assets/js/15.93cdcaaf.js"><link rel="prefetch" href="/summaries/assets/js/16.0edb0a53.js"><link rel="prefetch" href="/summaries/assets/js/17.02b3f48f.js"><link rel="prefetch" href="/summaries/assets/js/18.37b40f10.js"><link rel="prefetch" href="/summaries/assets/js/19.c1cdf081.js"><link rel="prefetch" href="/summaries/assets/js/20.8b49ed11.js"><link rel="prefetch" href="/summaries/assets/js/21.c9378bd5.js"><link rel="prefetch" href="/summaries/assets/js/22.94c5e98a.js"><link rel="prefetch" href="/summaries/assets/js/23.60d989ee.js"><link rel="prefetch" href="/summaries/assets/js/24.4befc6e4.js"><link rel="prefetch" href="/summaries/assets/js/26.71ae55ba.js"><link rel="prefetch" href="/summaries/assets/js/27.6d62ab89.js"><link rel="prefetch" href="/summaries/assets/js/28.87cc235d.js"><link rel="prefetch" href="/summaries/assets/js/29.0f0addba.js"><link rel="prefetch" href="/summaries/assets/js/3.ef6c641b.js"><link rel="prefetch" href="/summaries/assets/js/4.22d5eb2b.js"><link rel="prefetch" href="/summaries/assets/js/5.af226cb9.js"><link rel="prefetch" href="/summaries/assets/js/6.be55ee4f.js"><link rel="prefetch" href="/summaries/assets/js/7.0ebe5c62.js"><link rel="prefetch" href="/summaries/assets/js/8.ef0d4006.js"><link rel="prefetch" href="/summaries/assets/js/9.7ae09d25.js">
+    <link rel="stylesheet" href="/summaries/assets/css/0.styles.77a6be34.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="navbar-container"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/summaries/" class="home-link router-link-active"><img src="https://react-redux.js.org/img/redux_white.svg" alt="学海无涯" class="logo"> <span class="site-name can-hide">
+        学海无涯
+      </span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/summaries/web-basic/" class="nav-link">
+  Web基础
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web框架" class="dropdown-title"><span class="title">Web框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web框架" class="mobile-dropdown-title"><span class="title">Web框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          JS框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/summaries/web-framework/react/" class="nav-link router-link-active">
+  React
+</a></li><li class="dropdown-subitem"><a href="/summaries/web-framework/vue/" class="nav-link">
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web工具" class="dropdown-title"><span class="title">Web工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web工具" class="mobile-dropdown-title"><span class="title">Web工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          构建工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/summaries/web-tool/webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/summaries/web-tool/rollup/" class="nav-link">
+  Rollup
+</a></li></ul></li></ul></div></div> <a href="https://github.com/fengxinming/summaries" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></div></header> <div class="page-container"><div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/summaries/web-basic/" class="nav-link">
+  Web基础
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web框架" class="dropdown-title"><span class="title">Web框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web框架" class="mobile-dropdown-title"><span class="title">Web框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          JS框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/summaries/web-framework/react/" class="nav-link router-link-active">
+  React
+</a></li><li class="dropdown-subitem"><a href="/summaries/web-framework/vue/" class="nav-link">
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web工具" class="dropdown-title"><span class="title">Web工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web工具" class="mobile-dropdown-title"><span class="title">Web工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          构建工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/summaries/web-tool/webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/summaries/web-tool/rollup/" class="nav-link">
+  Rollup
+</a></li></ul></li></ul></div></div> <a href="https://github.com/fengxinming/summaries" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react的生命周期"><a href="#react的生命周期" class="header-anchor">#</a> React的生命周期</h1> <p>React的生命周期分为4个阶段：</p> <ul><li>挂载（4个）</li> <li>更新（5个）</li> <li>卸载（1个）</li> <li>错误处理（2个）</li></ul> <h2 id="挂载时阶段"><a href="#挂载时阶段" class="header-anchor">#</a> 挂载时阶段</h2> <ul><li><p>constructor()
+组件加载时调用一次，初始化state。</p></li> <li><p>static getDerivedStateFromProps(nextProps, prevState)
+组件加载时调用，返回一个对象来更新state。</p></li> <li><p>render()
+返回虚拟DOM树</p></li> <li><p>componentDidMount(prevProps, prevState)
+组件挂载之后调用一次</p></li></ul> <p>更新时阶段</p> <ul><li><p>static getDerivedStateFromProps(nextProps, prevState)
+组件更新时都会调用，返回一个对象来更新state。</p></li> <li><p>shouldComponentUpdate(nextProps, nextState)
+当 props 或 state 发生变化时，在渲染前调用，如果返回 true 就继续调用后面的 render 函数；如果返回 false 就阻止调用后面的钩子函数。</p></li> <li><p>render()
+返回虚拟DOM树</p></li> <li><p>getSnapshotBeforeUpdate(prevProps, prevState)
+在最近一次的渲染更新到 DOM 节点之前调用，返回一个值作为 componentDidUpdate 的第三个参数。</p></li> <li><p>componentDidUpdate(prevProps, prevState, snapshot)
+组件更新之后调用</p></li></ul> <h2 id="卸载时阶段"><a href="#卸载时阶段" class="header-anchor">#</a> 卸载时阶段</h2> <ul><li>componentWillUnmount()
+在组件销毁之前直接调用</li></ul> <h2 id="错误处理阶段"><a href="#错误处理阶段" class="header-anchor">#</a> 错误处理阶段</h2> <ul><li><p>static getDerivedStateFromError(error)
+在渲染阶段调用，它将抛出的错误作为参数，并返回一个对象来更新state</p></li> <li><p>componentDidCatch(error, info)
+在提交阶段被调用，用于记录错误</p></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/fengxinming/summaries/edit/master/src/web-framework/react/life-cycle.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <!----> </main></div></div><div class="global-ui"></div></div>
+    <script src="/summaries/assets/js/app.8c529481.js" defer></script><script src="/summaries/assets/js/2.8499a4ee.js" defer></script><script src="/summaries/assets/js/25.6abf712a.js" defer></script>
+  </body>
+</html>

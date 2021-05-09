@@ -14,5 +14,12 @@ module.exports = {
     'css-selector',
     'css-specifishity'
   ],
-  '/web-tool/webpack/': ['', 'performance-optimization']
+  'web-framework/react/': [
+    '',
+    'life-cycle',
+  ],
+  '/web-tool/webpack/': [
+    '', 
+    'performance-optimization'
+  ]
 };
